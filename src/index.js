@@ -572,7 +572,10 @@ class App extends React.Component {
           ) : (
             <h4>
               Bankiiiz Editions vous propose d'essayer en ligne son futur jeu
-              Logic Birds :
+              Logic Birds.
+              <br />
+              <br />
+              Sélectionnez un niveau :
             </h4>
           )}
           <h4>
@@ -602,6 +605,13 @@ class App extends React.Component {
               <a href={"https://" + url + "/?v=force&lvl=BFQN"}>Niveau 46</a>
             )}
           </h4>
+          {lvl > 0 ? null : (
+            <iframe
+              width="420"
+              height="315"
+              src="https://www.youtube.com/embed/ovFBdmWRQMI?autoplay=1&mute=1"
+            ></iframe>
+          )}
           {lvl == 2 ? <img src={helpLVL2} /> : null}
           {lvl == 11 ? <img src={helpLVL11} /> : null}
           {lvl == 16 ? <img src={helpLVL16} /> : null}
