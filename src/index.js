@@ -577,28 +577,8 @@ class App extends React.Component {
               Birds.
               <br />
               <br />
-              Sélectionnez un niveau en bas de page.
+              Sélectionnez un niveau :
             </h4>
-          )}
-          {lvl > 0 ? null : (
-            <div>
-              <img
-                src={boxA}
-                width={Math.trunc(140 * this.state.adjustBanner)}
-                height={Math.trunc(200 * this.state.adjustBanner)}
-              />
-              <img
-                src={boxB}
-                width={Math.trunc(200 * this.state.adjustBanner)}
-                height={Math.trunc(131 * this.state.adjustBanner)}
-              />
-              <br />
-              <iframe
-                width="420"
-                height="315"
-                src="https://www.youtube.com/embed/ovFBdmWRQMI?autoplay=1&mute=1"
-              ></iframe>
-            </div>
           )}
           <h4>
             {lvl == 2 ? (
@@ -627,6 +607,15 @@ class App extends React.Component {
               <a href={"https://" + url + "/?v=force&lvl=BFQN"}>Niveau 46</a>
             )}
           </h4>
+          {lvl > 0 ? null : (
+            <div>
+              <iframe
+                width="420"
+                height="315"
+                src="https://www.youtube.com/embed/ovFBdmWRQMI?autoplay=1&mute=1"
+              ></iframe>
+            </div>
+          )}
           {lvl == 2 ? <img src={helpLVL2} /> : null}
           {lvl == 11 ? <img src={helpLVL11} /> : null}
           {lvl == 16 ? <img src={helpLVL16} /> : null}
