@@ -88,6 +88,8 @@ import box from "./images/Box.png";
 import helpLVL2 from "./images/HelpLVL2.jpg";
 import helpLVL11 from "./images/HelpLVL11.jpg";
 import helpLVL16 from "./images/HelpLVL16.jpg";
+import boxA from "./images/Box3D.jpg";
+import boxB from "./images/BoxOpen.jpg";
 
 const url = window.location.host;
 const queryParams = new URLSearchParams(window.location.search);
@@ -571,8 +573,8 @@ class App extends React.Component {
             </h4>
           ) : (
             <h4>
-              Bankiiiz Editions vous propose d'essayer en ligne son futur jeu
-              Logic Birds.
+              Bankiiiz Editions vous propose d'essayer en ligne son jeu Logic
+              Birds.
               <br />
               <br />
               Sélectionnez un niveau :
@@ -606,11 +608,24 @@ class App extends React.Component {
             )}
           </h4>
           {lvl > 0 ? null : (
-            <iframe
-              width="420"
-              height="315"
-              src="https://www.youtube.com/embed/ovFBdmWRQMI?autoplay=1&mute=1"
-            ></iframe>
+            <div>
+              <img
+                src={boxA}
+                width={Math.trunc(140 * this.state.adjustBanner)}
+                height={Math.trunc(200 * this.state.adjustBanner)}
+              />
+              <img
+                src={boxB}
+                width={Math.trunc(200 * this.state.adjustBanner)}
+                height={Math.trunc(131 * this.state.adjustBanner)}
+              />
+              <br />
+              <iframe
+                width="420"
+                height="315"
+                src="https://www.youtube.com/embed/ovFBdmWRQMI?autoplay=1&mute=1"
+              ></iframe>
+            </div>
           )}
           {lvl == 2 ? <img src={helpLVL2} /> : null}
           {lvl == 11 ? <img src={helpLVL11} /> : null}
