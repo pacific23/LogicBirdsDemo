@@ -88,8 +88,6 @@ import box from "./images/Box.png";
 import helpLVL2 from "./images/HelpLVL2.jpg";
 import helpLVL11 from "./images/HelpLVL11.jpg";
 import helpLVL16 from "./images/HelpLVL16.jpg";
-import boxA from "./images/Box3D.jpg";
-import boxB from "./images/BoxOpen.jpg";
 
 const url = window.location.host;
 const queryParams = new URLSearchParams(window.location.search);
