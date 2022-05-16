@@ -184,6 +184,7 @@ class App extends React.Component {
     nbTry: 0,
     sizex: 0,
     adjust: 1,
+    adjustBanner: 1,
     imageCard: [
       card1,
       card2,
@@ -339,8 +340,11 @@ class App extends React.Component {
   }
 
   resize() {
-    if (isNaN(lvl)) return;
     this.state.sizex = window.innerWidth;
+    this.setState({
+      adjustBanner: Math.max(this.state.sizex / 800, 1)
+    });
+    if (isNaN(lvl)) return;
     this.setState({
       adjust: Math.min(
         this.state.sizex / (130 * this.state.solutions[lvl].length + 60),
@@ -549,7 +553,7 @@ class App extends React.Component {
       <div className="App">
         <div>
           <table class="top">
-            <tr class="top">
+            <tr class="top" height={Math.trunc(165 * this.state.adjustBanner)}>
               <td></td>
               <td width="50%">
                 <h1>
