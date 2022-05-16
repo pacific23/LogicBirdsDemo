@@ -553,7 +553,7 @@ class App extends React.Component {
       <div className="App">
         <div>
           <table class="top">
-            <tr class="top" height={Math.trunc(165 * this.state.adjustBanner)}>
+            <tr class="top" height={Math.trunc(100 * this.state.adjustBanner)}>
               <td></td>
               <td width="50%">
                 <h1>
@@ -708,6 +708,22 @@ class App extends React.Component {
               />
               {verifyToken != "force" ? "/60" : null}
             </div>
+            {(this.state.gameState != 2) &
+            (this.state.gameState != -4) &
+            (this.state.buttonValid == 1) ? (
+              <div>
+                <input
+                  type="image"
+                  src={this.state.actualButton}
+                  onClick={this.checkSol}
+                />
+              </div>
+            ) : null}
+            {this.state.gameState == 2 ? (
+              <div>
+                <img src={button3} />
+              </div>
+            ) : null}
             <div>
               <DropTarget
                 targetKey="line"
@@ -824,17 +840,6 @@ class App extends React.Component {
                 ) : null}
               </DropTarget>
             </div>
-            {(this.state.gameState != 2) &
-            (this.state.gameState != -4) &
-            (this.state.buttonValid == 1) ? (
-              <div>
-                <input
-                  type="image"
-                  src={this.state.actualButton}
-                  onClick={this.checkSol}
-                />
-              </div>
-            ) : null}
             <div>
               <DragDropContainer
                 targetKey="line"
@@ -975,12 +980,6 @@ class App extends React.Component {
                 </DragDropContainer>
               ) : null}
             </div>
-          </div>
-        ) : null}
-        {this.state.gameState == 2 ? (
-          <div>
-            <br />
-            <img src={button3} />
           </div>
         ) : null}
       </div>
