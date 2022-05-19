@@ -78,16 +78,10 @@ import card57 from "./images/57.jpg";
 import card58 from "./images/58.jpg";
 import card59 from "./images/59.jpg";
 import card60 from "./images/60.jpg";
-import card62 from "./images/62.jpg";
-import card63 from "./images/63.jpg";
-import card64 from "./images/64.jpg";
-import card65 from "./images/65.jpg";
-import card66 from "./images/66.jpg";
-import card67 from "./images/67.jpg";
 import box from "./images/Box.png";
 import helpLVL2 from "./images/HelpLVL2.jpg";
 import helpLVL11 from "./images/HelpLVL11.jpg";
-import helpLVL16 from "./images/HelpLVL16.jpg";
+import helpLVL24 from "./images/HelpLVL24.jpg";
 
 const url = window.location.host;
 const queryParams = new URLSearchParams(window.location.search);
@@ -159,13 +153,7 @@ class App extends React.Component {
     JVDI: 57,
     QABP: 58,
     TBNT: 59,
-    AQPT: 60,
-    ABCD: 62,
-    AABB: 63,
-    BIRD: 64,
-    BIRE: 65,
-    BIRF: 66,
-    BIRG: 67
+    AQPT: 60
   };
   state = {
     actualButton: button,
@@ -245,14 +233,7 @@ class App extends React.Component {
       card57,
       card58,
       card59,
-      card60,
-      card60,
-      card62,
-      card63,
-      card64,
-      card65,
-      card66,
-      card67
+      card60
     ],
     imageBird: [bird0, bird1, bird2, bird3, bird4, bird5, birdX],
     draggedBird: -1,
@@ -276,7 +257,7 @@ class App extends React.Component {
       "210",
       "102",
       "210",
-      "210",
+      "201",
       "012",
       "2031",
       "0123",
@@ -291,7 +272,7 @@ class App extends React.Component {
       "43021",
       "40312",
       "04123",
-      "13024",
+      "14032",
       "20413",
       "20143",
       "34210",
@@ -322,14 +303,7 @@ class App extends React.Component {
       "124053",
       "234051",
       "304152",
-      "234015",
-      "XXXXXX",
-      "10423",
-      "314205",
-      "312504",
-      "41320",
-      "41032",
-      "23410"
+      "234015"
     ]
   };
 
@@ -580,29 +554,29 @@ class App extends React.Component {
           )}
           <h4>
             {lvl == 2 ? (
-              "Niveau 2"
+              "Exemple 1"
             ) : (
-              <a href={"https://" + url + "/?v=force&lvl=CEPM"}>Niveau 2</a>
+              <a href={"https://" + url + "/?v=force&lvl=CEPM"}>Exemple 1</a>
             )}{" "}
             {lvl == 11 ? (
-              "Niveau 11"
+              "Exemple 2"
             ) : (
-              <a href={"https://" + url + "/?v=force&lvl=FGXY"}>Niveau 11</a>
+              <a href={"https://" + url + "/?v=force&lvl=FGXY"}>Exemple 2</a>
             )}{" "}
-            {lvl == 16 ? (
-              "Niveau 16"
+            {lvl == 24 ? (
+              "Exemple 3"
             ) : (
-              <a href={"https://" + url + "/?v=force&lvl=BLQF"}>Niveau 16</a>
+              <a href={"https://" + url + "/?v=force&lvl=FDOQ"}>Exemple 3</a>
             )}{" "}
-            {lvl == 26 ? (
-              "Niveau 26"
+            {lvl == 40 ? (
+              "Exemple 4"
             ) : (
-              <a href={"https://" + url + "/?v=force&lvl=KHNX"}>Niveau 26</a>
+              <a href={"https://" + url + "/?v=force&lvl=AVDA"}>Exemple 4</a>
             )}{" "}
-            {lvl == 46 ? (
-              "Niveau 46"
+            {lvl == 60 ? (
+              "Exemple 5"
             ) : (
-              <a href={"https://" + url + "/?v=force&lvl=BFQN"}>Niveau 46</a>
+              <a href={"https://" + url + "/?v=force&lvl=AQPT"}>Exemple 5</a>
             )}
           </h4>
           {lvl > 0 ? null : (
@@ -616,7 +590,7 @@ class App extends React.Component {
           )}
           {lvl == 2 ? <img src={helpLVL2} /> : null}
           {lvl == 11 ? <img src={helpLVL11} /> : null}
-          {lvl == 16 ? <img src={helpLVL16} /> : null}
+          {lvl == 24 ? <img src={helpLVL24} /> : null}
         </div>
         {this.state.gameState == -4 ? (
           <div>
